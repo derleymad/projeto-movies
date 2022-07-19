@@ -1,16 +1,18 @@
-package com.github.derleymad.myapplication
+package com.github.derleymad.youflix
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 
 class MainActivity : AppCompatActivity() {
+    //quando a activity é criada
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.i("Teste", "onCreate")
     }
 
+    //quando a activity é iniciada
     override fun onStart() {
         super.onStart()
         // checar GPS

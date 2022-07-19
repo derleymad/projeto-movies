@@ -1,4 +1,4 @@
-package com.github.derleymad.myapplication
+package com.github.derleymad.youflix
 
 import org.junit.Test
 
