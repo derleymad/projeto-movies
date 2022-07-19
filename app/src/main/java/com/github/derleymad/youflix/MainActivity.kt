@@ -3,44 +3,42 @@ package com.github.derleymad.youflix
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.github.derleymad.youflix.model.Category
+import com.github.derleymad.youflix.model.Movie
 
 class MainActivity : AppCompatActivity() {
-    //quando a activity é criada
+
+    private lateinit var recyclerView:RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.i("Teste", "onCreate")
+
+        val movies = mutableListOf<Movie>()
+        for(i in 0 .. 20){
+            movies.add(
+                Movie(
+                    img = R.drawable.movie
+                )
+            )
+        }
+
+        val categories = mutableListOf<Category>()
+        for(j in 0..5){
+            categories.add(Category("Categoria $j",movies))
+        }
+
+        recyclerView = findViewById(R.id.rv_main)
+        val adapter = CategoryAdapter(categories)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
+
     }
 
-    //quando a activity é iniciada
-    override fun onStart() {
-        super.onStart()
-        // checar GPS
-        Log.i("Teste", "onStart")
-    }
 
-    override fun onResume() {
-        super.onResume()
-        // voltar algo (voltar de uma tela)(refresh)
-        Log.i("Teste", "onResume")
-    }
 
-    override fun onPause() {
-        super.onPause()
-        // registrar algum evento
-        // quando alguem liga vc e vc ta jogando
-        Log.i("Teste", "onPause")
-    }
 
-    override fun onStop() {
-        super.onStop()
-        // livrar recuros (camera, qrcode)
-        Log.i("Teste", "onStop")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        // analytics
-        Log.i("Teste", "onDestroy")
-    }
 }
