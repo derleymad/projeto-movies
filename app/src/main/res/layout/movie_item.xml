@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/img"
-        android:src="@drawable/movie"
+        android:src="@drawable/placeholder_bg_item"
         android:scaleType="centerCrop"
         android:layout_margin="4dp"
         android:layout_width="0dp"
