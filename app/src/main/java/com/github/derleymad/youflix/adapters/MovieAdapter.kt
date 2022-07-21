@@ -35,10 +35,12 @@ class MovieAdapter(
     inner class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(currentItem: Movie) {
             val movieImg = itemView.findViewById<ImageView>(R.id.img)
+                Picasso.get()
+                    .load(currentItem.coverUrl)
+                    .placeholder(R.drawable.placeholder_bg_item)
+                    .error(R.drawable.placeholder_bg_item)
+                    .into(movieImg)
 
-            Picasso.get()
-                .load(currentItem.coverUrl)
-                .into(movieImg)
 
             movieImg.setOnClickListener {
                 movieOnClickListener?.invoke(currentItem.id)

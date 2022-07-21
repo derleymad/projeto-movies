@@ -31,15 +31,15 @@ class MovieActivity : AppCompatActivity() {
         }
 
 
-//        val id = intent?.extras?.getString("id") ?: throw IllegalStateException("Id not found")
+        val id = intent?.extras?.getInt("id",0) ?: throw IllegalStateException("Id not found")
 
 
         tvTitle = findViewById(R.id.movie_txt_title)
         tvCast = findViewById(R.id.movie_txt_cast)
         tvDesc = findViewById(R.id.movie_txt_desc)
-        tvTitle.text = "Karoline Bad  "
-        tvDesc.text = "When his parents are killed, billionaire playboy Bruce Wayne relocates to Asia, where he is mentored by Henri Ducard and Ra's Al Ghul in how to fight evil. When learning about the plan to wipe out evil in Gotham City by Ducard, Bruce prevents this plan from getting any further and heads back to his home."
-        tvCast.text = "Christian Bale, Michael Caine, Liam Neeson as Henri Ducard/Ra's, Katie Holmes, Gary Oldman, Cillian Murph, Tom Wilkinson, Rutger Hauer, Ken Watanabe, Mark Boone Junior, Linus Roache, Morgan Freeman, Larry Holden, Colin McFarlane, Sara Stewart, Richard Brake, Tim Booth, John Nolan"
+        tvTitle.text = "Filme $id"
+        tvDesc.text = "Essa é a descrição do filme $id onde tal ator morre e todos ficam tristes por sua morte!"
+        tvCast.text = "Esse é o elenco do filme $id"
 
         recyclerView = findViewById(R.id.rv_similar)
         val adapter = MovieAdapter(movies, R.layout.movie_item_similar)
