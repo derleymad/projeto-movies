@@ -1,6 +1,5 @@
 package com.github.derleymad.youflix
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,15 +33,12 @@ class CategoryAdapter(private val dataList: List<Category>) :
             val categoryTitle = itemView.findViewById<TextView>(R.id.tv_category_title)
             val rvCategory: RecyclerView = itemView.findViewById(R.id.rv_category)
 
-            categoryTitle.text = currentItem.name
+            categoryTitle.text = currentItem.title
 
-            val adapter = MovieAdapter(currentItem.movies, R.layout.movie_item) { id ->
-                itemView.context.startActivity(Intent(itemView.context, MovieActivity::class.java))
-            }
+            val adapter = MovieAdapter(currentItem.movies, R.layout.movie_item)
             rvCategory.adapter = adapter
             rvCategory.layoutManager =
                 LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
-
         }
     }
 }

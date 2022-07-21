@@ -24,14 +24,7 @@ class MovieActivity : AppCompatActivity() {
         setContentView(R.layout.activity_movie)
 
         val movies = mutableListOf<Movie>()
-        for (i in 0..20) {
-            movies.add(
-                Movie(
-                    img = R.drawable.movie,
-                    id = i
-                )
-            )
-        }
+
         tvTitle = findViewById(R.id.movie_txt_title)
         tvCast = findViewById(R.id.movie_txt_cast)
         tvDesc = findViewById(R.id.movie_txt_desc)
@@ -40,9 +33,7 @@ class MovieActivity : AppCompatActivity() {
         tvCast.text = "Christian Bale, Michael Caine, Liam Neeson as Henri Ducard/Ra's, Katie Holmes, Gary Oldman, Cillian Murph, Tom Wilkinson, Rutger Hauer, Ken Watanabe, Mark Boone Junior, Linus Roache, Morgan Freeman, Larry Holden, Colin McFarlane, Sara Stewart, Richard Brake, Tim Booth, John Nolan"
 
         recyclerView = findViewById(R.id.rv_similar)
-        val adapter = MovieAdapter(movies, R.layout.movie_item_similar) { id ->
-            startActivity(Intent(this@MovieActivity, MovieActivity::class.java))
-        }
+        val adapter = MovieAdapter(movies, R.layout.movie_item_similar)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(this@MovieActivity, 3)
 

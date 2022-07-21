@@ -8,11 +8,11 @@ import android.widget.ImageView
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView
 import com.github.derleymad.youflix.model.Movie
+import com.squareup.picasso.Picasso
 
 class MovieAdapter(
     private val dataList: List<Movie>,
-    @LayoutRes private var layoutItem: Int,
-    private var movieOnClickListener: (Int) -> Unit
+    @LayoutRes private var layoutItem: Int
 ) : RecyclerView.Adapter<MovieAdapter.MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
@@ -33,10 +33,9 @@ class MovieAdapter(
     inner class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(currentItem: Movie) {
             val movieImg = itemView.findViewById<ImageView>(R.id.img)
-            movieImg.setOnClickListener {
-                movieOnClickListener(currentItem.id)
-            }
-//            movieImg.setImageResource(currentItem.img)
+            Picasso.get()
+                .load(currentItem.coverUrl)
+                .into(movieImg)
         }
     }
 }
