@@ -151,41 +151,8 @@
           "cover_url": "https://derleymad.github.io/youflix/images/AAAAAfNVI81VGGFGYCc0BKGDJwgNBYEZNa4dHxpSn7RFMHKUIs28lw2t5j3nNCvmf82YI4ZZlMG2eYmorTSayX1ucXtBC3z80eSjJQ.jpg"
         }
       ]
-    },
- {
-      "id": 5,
-      "title": "Para ver de noite",
-      "movie": [
-        {
-          "id": 34,
-          "cover_url": "https://derleymad.github.io/youflix/images/iNSa1kwVsOsfAHwopMLM7PnrDhU.jpg"
-        },
-        {
-          "id": 35,
-          "cover_url": "https://derleymad.github.io/youflix/images/cIh164JVqUGwVc5fkHsMKkfi9aV.jpg"
-        },
-        {
-          "id": 36,
-          "cover_url": "https://derleymad.github.io/youflix/images/2xPkj09lesebCM7EtvNlysdLb30.jpg"
-        },
-        {
-          "id": 37,
-          "cover_url": "https://derleymad.github.io/youflix/images/6s14X6rpZYVWhjp6flPixdBiCkL.jpg"
-        },
-        {
-          "id": 38,
-          "cover_url": "https://derleymad.github.io/youflix/images/y33paUKgDhJrdsvNDiGjltYkWau.jpg"
-        },
-        {
-          "id": 39,
-          "cover_url": "https://derleymad.github.io/youflix/images/TUmSO5EPIZAfRSOEjmbrgbTw8i.jpg"
-        },
-        {
-          "id": 40,
-          "cover_url": "https://derleymad.github.io/youflix/images/fcOTYArjKuAgufwHoTvx8w9UKCv.jpg"
-        }
-      ]
     }
+ 
 
   ]
 }
