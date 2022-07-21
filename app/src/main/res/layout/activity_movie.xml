@@ -24,6 +24,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:src="@drawable/ic_play"

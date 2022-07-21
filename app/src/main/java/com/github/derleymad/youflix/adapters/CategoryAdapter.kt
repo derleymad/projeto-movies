@@ -1,4 +1,4 @@
-package com.github.derleymad.youflix
+package com.github.derleymad.youflix.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,9 +6,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.derleymad.youflix.R
 import com.github.derleymad.youflix.model.Category
 
-class CategoryAdapter(private val dataList: List<Category>) :
+class CategoryAdapter(
+    private val dataList: List<Category>,
+    private val onItemClickListener: ((Int) -> Unit)? = null
+    ) :
     RecyclerView.Adapter<CategoryAdapter.MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
@@ -35,7 +39,7 @@ class CategoryAdapter(private val dataList: List<Category>) :
 
             categoryTitle.text = currentItem.title
 
-            val adapter = MovieAdapter(currentItem.movies, R.layout.movie_item)
+            val adapter = MovieAdapter(currentItem.movies, R.layout.movie_item, onItemClickListener)
             rvCategory.adapter = adapter
             rvCategory.layoutManager =
                 LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)

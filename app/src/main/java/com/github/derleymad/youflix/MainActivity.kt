@@ -1,5 +1,6 @@
 package com.github.derleymad.youflix
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
@@ -7,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.derleymad.youflix.adapters.CategoryAdapter
 import com.github.derleymad.youflix.model.Category
 import com.github.derleymad.youflix.utils.DataRequest
 
@@ -22,7 +24,12 @@ class MainActivity : AppCompatActivity(), DataRequest.Callback{
 
         progress = findViewById(R.id.progress_bar)
 
-        adapter = CategoryAdapter(categories)
+        adapter = CategoryAdapter(categories){
+            val intent = Intent(this@MainActivity,MovieActivity::class.java)
+            intent.putExtra("id",it)
+            startActivity(intent)
+        }
+
         val rv: RecyclerView = findViewById(R.id.rv_main)
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = adapter

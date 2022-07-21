@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/img"
+        style="@style/selectItemClick"
         android:src="@drawable/placeholder_bg_item"
         android:scaleType="centerCrop"
         android:layout_margin="4dp"
