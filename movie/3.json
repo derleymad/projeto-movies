@@ -1,0 +1,41 @@
+{
+  "id": 3,
+  "title": "The Silence",
+  "desc": "With the world under attack by deadly creatures who hunt by sound, a teen and her family seek refuge outside the city and encounter a mysterious cult.",
+  "cast": "Stanley Tucci, Kiernan Shipka, Miranda Otto, Kate Trotter, John Corbett, Kyle Breitkopf, Dempsey Bryk, Billy MacLellan",
+  "cover_url": "https://derleymad.github.io/youflix/images/aedf297720c5e7f2b600bd8f40b0674841949355.jpg",
+  "movie": [
+    {
+      "id": 1,
+      "cover_url": "https://derleymad.github.io/youflix/images/AAAAAdGB4BQI-v-nabbMcT85DHpwWWlYuFyEU4vRrH-duWCtsQlWAtFKtM27TkhD9BHePeZQe2W3BwOCFlOTv0JTSYPJ2F6SZ-QWGA.jpg"
+    },
+    {
+      "id": 2,
+      "cover_url": "https://derleymad.github.io/youflix/images/AAAAAWRswDc6GiY5a_Fi4eaYxY8HZjBRik-FrKjSsW4G9VrJNG9bQARQOSm3ooC7ptBo-luvrkchZyQJRLx0D1pcHmDeWZNNUxxsbQ.jpg"
+    },
+    {
+      "id": 3,
+      "cover_url": "https://derleymad.github.io/youflix/images/AAAAAZSLx4IVqYHJinJamP_8sYeesd1nPf6SEKmQMGZnmkMvYOsQW5aYGKWf9cMhvIZy02QDpWq1GocjAb5rwX82oXBT0zlRrBQCBQ.jpg"
+    },
+    {
+      "id": 4,
+      "cover_url": "https://derleymad.github.io/youflix/images/AAAAAZSLx4IVqYHJinJamP_8sYeesd1nPf6SEKmQMGZnmkMvYOsQW5aYGKWf9cMhvIZy02QDpWq1GocjAb5rwX82oXBT0zlRrBQCBQ.jpg"
+    },
+    {
+      "id": 5,
+      "cover_url": "https://derleymad.github.io/youflix/images/AAAAAcAmWTHnbepgh6vuLCrcU70GL7yPsHc5QZXmrP6NC3wuQBdAnqie3rPb0bfhSu5b_Aty3jO-oStzgTqqiBYujeggUXPP6qOmCQ.jpg"
+    },
+    {
+      "id": 6,
+      "cover_url": "https://derleymad.github.io/youflix/images/AAAAAegrsh7TV3ffTcVGQ5HSMD40PE6WlEd6qQCD3dZmNfR1ZpBwGj8fYI74ggsjeLnAUFH8G7qqGHC-9XOcwcRPXUY2FJ8FpylEEQ.jpg"
+    },
+    {
+      "id": 7,
+      "cover_url": "https://derleymad.github.io/youflix/images/AAAAAcd-gTvEq-qn_V-6G94jxzqx3N6Rs4J6414qMVPjEJ3A3HgEk5uoqh7vZuzJCoeNjOGG_8LkrsC1_F-cGaHSBIfoyXtyQ3aTGQ.jpg"
+    },
+    {
+      "id": 8,
+      "cover_url": "https://derleymad.github.io/youflix/images/AAAAAX0NuVnu400JGawHQq9UnpVOxKfeUiin1KYlmN7YbRRLhB9g6O21JK1zODevKMco3doXEcA0pogkBKAuwl911z5j9exE5CQ9Wg.jpg"
+    }
+  ]
+}
