@@ -9,13 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.github.derleymad.youflix.R
 import com.github.derleymad.youflix.model.Movie
 import com.squareup.picasso.Picasso
-import java.io.IOException
 
-class MovieAdapter(
+class MovieDetailAdapter(
     private val dataList: List<Movie>,
     @LayoutRes private var layoutItem: Int,
     private var movieOnClickListener: ((Int) -> Unit)? = null
-) : RecyclerView.Adapter<MovieAdapter.MainViewHolder>() {
+) : RecyclerView.Adapter<MovieDetailAdapter.MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(layoutItem, parent, false)

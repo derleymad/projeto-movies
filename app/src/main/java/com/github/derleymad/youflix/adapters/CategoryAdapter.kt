@@ -37,7 +37,7 @@ class CategoryAdapter(
             val categoryTitle = itemView.findViewById<TextView>(R.id.tv_category_title)
             val rvCategory: RecyclerView = itemView.findViewById(R.id.rv_category)
 
-            categoryTitle.text = currentItem.title
+            categoryTitle.text = currentItem.name
 
             val adapter = MovieAdapter(currentItem.movies, R.layout.movie_item, onItemClickListener)
             rvCategory.adapter = adapter

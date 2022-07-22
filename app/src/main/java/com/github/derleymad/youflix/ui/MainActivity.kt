@@ -1,4 +1,4 @@
-package com.github.derleymad.youflix
+package com.github.derleymad.youflix.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.derleymad.youflix.R
 import com.github.derleymad.youflix.adapters.CategoryAdapter
 import com.github.derleymad.youflix.model.Category
-import com.github.derleymad.youflix.utils.DataRequest
+import com.github.derleymad.youflix.utils.CategoryTask
+import com.github.derleymad.youflix.utils.MainCallBack
 
-class MainActivity : AppCompatActivity(), DataRequest.Callback{
+class MainActivity : AppCompatActivity(), CategoryTask.Callback {
 
     private lateinit var progress: ProgressBar
     private lateinit var adapter: CategoryAdapter
@@ -22,10 +24,11 @@ class MainActivity : AppCompatActivity(), DataRequest.Callback{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        progress = findViewById(R.id.progress_bar)
+
+        progress = findViewById(R.id.progressBar)
 
         adapter = CategoryAdapter(categories){
-            val intent = Intent(this@MainActivity,MovieActivity::class.java)
+            val intent = Intent(this@MainActivity, MovieActivity::class.java)
             intent.putExtra("id",it)
             startActivity(intent)
         }
@@ -34,7 +37,8 @@ class MainActivity : AppCompatActivity(), DataRequest.Callback{
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = adapter
 
-        DataRequest(this).execute("https://derleymad.github.io/youflix/categories.json")
+        CategoryTask(this).execute("https://derleymad.github.io/youflix/categories.json")
+
     }
 
     override fun onPreExecute() {

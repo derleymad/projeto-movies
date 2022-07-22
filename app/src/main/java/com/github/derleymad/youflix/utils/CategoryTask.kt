@@ -5,6 +5,7 @@ import android.os.Looper
 import android.util.Log
 import com.github.derleymad.youflix.model.Category
 import com.github.derleymad.youflix.model.Movie
+import com.github.derleymad.youflix.ui.MainActivity
 import org.json.JSONObject
 import java.io.BufferedInputStream
 import java.io.ByteArrayOutputStream
@@ -14,8 +15,10 @@ import java.net.URL
 import java.util.concurrent.Executors
 import javax.net.ssl.HttpsURLConnection
 
-class DataRequest (private val callback: Callback){
+class CategoryTask(private val callback: MainActivity) {
+
     private val handler = Handler(Looper.getMainLooper())
+    private val executor = Executors.newSingleThreadExecutor()
 
     interface Callback {
         fun onPreExecute()
@@ -26,7 +29,6 @@ class DataRequest (private val callback: Callback){
     fun execute(url: String) {
         callback.onPreExecute()
         // nesse momento, estamos utilizando a UI-thread (1)
-        val executor = Executors.newSingleThreadExecutor()
 
         executor.execute {
             var urlConnection: HttpsURLConnection? = null
@@ -116,6 +118,5 @@ class DataRequest (private val callback: Callback){
         }
         return String(baos.toByteArray())
     }
-
 
 }

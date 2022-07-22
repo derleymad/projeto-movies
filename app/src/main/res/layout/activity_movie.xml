@@ -5,7 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".MovieActivity">
+    tools:context=".ui.MovieActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBarMovieDetail"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_background"
@@ -24,6 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imagePlay"
         android:focusable="true"
         android:clickable="true"
         android:foreground="?attr/selectableItemBackground"
@@ -106,5 +117,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_similiar_fixed"
         tools:listitem="@layout/movie_item_similar" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
