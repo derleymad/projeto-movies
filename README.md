@@ -28,10 +28,10 @@ elementos básicos, usando o mais proximo possivel do código puro para fazer re
 - [ ] IA ou Graph Algoritm - Opção semelhante
 
 ## Screenshots
- <img src="images/gif.gif" width="100" />
+ <img src="images/gif.gif" width="200" />
 <p float="left">
-  <img src="images/1-home.PNG" width="100" /> 
-  <img src="images/2-movie.PNG" width="100" />
+  <img src="images/1-home.PNG" width="200" /> 
+  <img src="images/2-movie.PNG" width="200" />
 </p>
 
 ## Tecnologia
