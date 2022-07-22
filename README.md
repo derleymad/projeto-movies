@@ -30,8 +30,8 @@ elementos básicos, usando o mais proximo possivel do código puro para fazer re
 ## Screenshots
  <img src="images/gif.gif" width="100" />
 <p float="left">
-  <img src="images/1-home.png" width="100" /> 
-  <img src="images/2-movie.jpeg" width="100" />
+  <img src="images/1-home.PNG" width="100" /> 
+  <img src="images/2-movie.PNG" width="100" />
 </p>
 
 ## Tecnologia
