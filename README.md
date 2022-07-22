@@ -16,7 +16,7 @@ Este projeto foi feito em kotlin, e tem objetivo central, criar um aplicativo na
 ele consome uma API feita por mim, e está disponível nesse mesmo repositório, na branch youflix-api,
 elementos básicos, usando o mais proximo possivel do código puro para fazer requisições WEB.
 
-##To do
+## To do
 
 - [ ] Splash Screen
 - [x] Tela Inicial
