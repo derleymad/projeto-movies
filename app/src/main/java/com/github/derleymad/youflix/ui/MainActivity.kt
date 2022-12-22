@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity(), CategoryTask.Callback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         progress = findViewById(R.id.progressBar)
 
         adapter = CategoryAdapter(categories){
